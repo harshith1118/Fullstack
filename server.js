@@ -38,3 +38,8 @@ app.post('/api/count', async (req, res) => {
 app.listen(PORT, '0.0.0.0', () =>
   console.log(`Server listening on http://0.0.0.0:${PORT}`)
 );
+
+// At the bottom of server.js
+app.get('/', (req, res) => {
+  res.json('🚀 Backend is running!  Hit /api/count');
+});
