@@ -1,10 +1,11 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
+const PORT = process.env.PORT || 3002;
 const { MongoMemoryServer } = require('mongodb-memory-server');
 
 const app = express();
-const PORT = 3002;
+// const PORT = 3002;
 
 // 1️⃣  Allow React dev server on 3000
 app.use(cors({ origin: 'http://localhost:3000' }));
@@ -34,4 +35,6 @@ app.post('/api/count', async (req, res) => {
   res.json(doc.value);
 });
 
-app.listen(PORT, '0.0.0.0', () => console.log(`Server listening on http://localhost:${PORT}`));
+app.listen(PORT, '0.0.0.0', () =>
+  console.log(`Server listening on http://0.0.0.0:${PORT}`)
+);
