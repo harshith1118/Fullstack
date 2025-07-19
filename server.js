@@ -34,4 +34,4 @@ app.post('/api/count', async (req, res) => {
   res.json(doc.value);
 });
 
-app.listen(PORT, () => console.log(`Server listening on http://localhost:${PORT}`));
+app.listen(PORT, '0.0.0.0', () => console.log(`Server listening on http://localhost:${PORT}`));
