@@ -4,7 +4,8 @@
   "main": "server.js",
   "scripts": {
     "dev": "concurrently \"node server.js\" \"npm start --prefix client --port 3001\"",
-    "start": "node server.js"
+    "start": "node server.js",
+    "proxy": "https://fullstack-1-3tr5.onrender.com"
   },
   "keywords": [],
   "author": "",
